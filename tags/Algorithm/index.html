@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>How to publish my writing.md | Hexo</title>
+  <title>Tag: Algorithm | Hexo</title>
   
   
 
@@ -99,16 +99,51 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
-  
+            
+    <script>
+        window.subData= { title:'Tag : Algorithm'}
+    </script>
+
+
+
+
+  <section class="post-list">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+
+
+      
+
+      
+
+      
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+    
 <section class="meta">
   
   
   <div class="meta" id="header-meta">
     
-      
-          <h1 class="title">How to publish my writing.md</h1>
-      
+      <h2 class="title">
+          <a href="/2019/03/31/Greatest-Common-Divisor-Algorithm-md/">
+              
+                  Greatest Common Divisor Algorithm.md
+              
+          </a>
+      </h2>
     
 
     <div class="new-meta-box">
@@ -132,17 +167,6 @@
         
       
       
-        
-          <div class="new-meta-item browse busuanzi">
-            <a class="notlink">
-              <i class="fas fa-eye" aria-hidden="true"></i>
-              <span id="busuanzi_value_page_pv">
-                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
-              </span>
-            </a>
-          </div>
-        
-      
       
     </div>
     <hr>
@@ -150,98 +174,64 @@
 </section>
 
     <section class="article typo">
-      <div class="article-entry" itemprop="articleBody">
-        <h1 id="How-to-Publish-My-Writing-Next-Time"><a href="#How-to-Publish-My-Writing-Next-Time" class="headerlink" title="How to Publish My Writing Next Time"></a>How to Publish My Writing Next Time</h1><p>First, type in </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo new <span class="string">"How to * .md"</span></span><br></pre></td></tr></table></figure>
-<p>then in folder /source/_posts/ we can see our newly generated markdown file.</p>
-<p>Then open and edit it.</p>
-<p>After editing, type in</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo clean &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
-<p>g standards for generate</p>
-<p>Then in order to preview, we can type in</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo server -p 8080</span><br></pre></td></tr></table></figure>
-<p>p standards for port</p>
-<p>then we can preview in our browser.</p>
-<p>If it is ok, we can type in</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo d</span><br></pre></td></tr></table></figure>
-<p>d standards for deploy</p>
-<p>to publish it.</p>
+        <h1 id="Greatest-Common-Divisor-Algorithm"><a href="#Greatest-Common-Divisor-Algorithm" class="headerlink" title="Greatest Common Divisor Algorithm"></a>Greatest Common Divisor Algorithm</h1><pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span>
 
-      </div>
-        
-          <section class="meta" id="footer-meta">
-            <hr>
-            <div class="new-meta-box">
-              
-                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-03-31T03:00:02+08:00">
-                  <a class="notlink">
-                    <i class="fas fa-save" aria-hidden="true"></i>
-                    2019-03-31
-                  </a>
-                </div>
-              
-              
-              
-            </div>
-          </section>
+
+<span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>{
+    <span class="keyword">int</span> c = a % b;
+    <span class="keyword">if</span> (c != <span class="number">0</span>) {
+        <span class="keyword">return</span> gcd(b, c);
+    } <span class="keyword">else</span> {
+        <span class="keyword">return</span> b;
+    }
+
+}
+
+<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>{
+    <span class="keyword">int</span> a, b;
+    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b);
+
+    <span class="keyword">if</span> (a &gt;= b) {
+        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, gcd(a, b));
+    } <span class="keyword">else</span> {
+        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, gcd(b, a));
+    }
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}
+</code></pre>
+
         
 
         
-            <div class="prev-next">
+            <div class="full-width auto-padding tags">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous</h6>
-                            <h4>
-                                <a href="/2019/03/31/Whether-a-binary-tree-is-balanced-or-not-md/" rel="prev" title="Whether a binary tree is balanced or not.md">
-                                  
-                                      Whether a binary tree is balanced or not.md
-                                  
-                                </a>
-                            </h4>
-                            
-                        </span>
-                    </section>
-                
-                
-                    <section class="next">
-                        <span class="art-item-right" aria-hidden="true">
-                            <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
-                            <h4>
-                                <a href="/2019/03/31/hello-world/" rel="prev" title="Hello World">
-                                    
-                                        Hello World
-                                    
-                                </a>
-                            </h4>
-                            
-                        </span>
-                    </section>
+                    <a href="/tags/Algorithm/"><i class="fas fa-hashtag fa-fw"></i>Algorithm</a>
                 
             </div>
         
-
     </section>
-
 </article>
 
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+            </div>
+          
+        
+      
+
+  </section>
 
 
-<br>
-
-<!-- 显示推荐文章和评论 -->
 
 
 
 
+  
 
-<script>
-    window.subData = {
-        title: 'How to publish my writing.md',
-        tools: true
-    }
-</script>
+  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+  
+
+  
+
 
 
         </div>
