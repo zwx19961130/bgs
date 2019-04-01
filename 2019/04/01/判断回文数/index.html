@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Tag: Algorithm | Hexo</title>
+  <title>判断回文数 | Hexo</title>
   
   
 
@@ -99,59 +99,16 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            
-    <script>
-        window.subData= { title:'Tag : Algorithm'}
-    </script>
-
-
-
-
-  <section class="post-list">
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-
-
-
-      
-
-      
-
-      
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
+            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+  
 <section class="meta">
   
   
   <div class="meta" id="header-meta">
     
-      <h2 class="title">
-          <a href="/2019/04/01/判断回文数/">
-              
-                  判断回文数
-              
-          </a>
-      </h2>
+      
+          <h1 class="title">判断回文数</h1>
+      
     
 
     <div class="new-meta-box">
@@ -175,6 +132,17 @@
         
       
       
+        
+          <div class="new-meta-item browse busuanzi">
+            <a class="notlink">
+              <i class="fas fa-eye" aria-hidden="true"></i>
+              <span id="busuanzi_value_page_pv">
+                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+              </span>
+            </a>
+          </div>
+        
+      
       
     </div>
     <hr>
@@ -182,193 +150,99 @@
 </section>
 
     <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
         <p>判断一个数是否为回文数。</p>
 <p>设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n=1234321，则称n为一回文数；但若n=1234567，则n不是回文数</p>
 <p>实例</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, reversedInteger = <span class="number">0</span>, remainder, originalInteger;</span><br><span class="line"> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"输入一个整数: "</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line"> </span><br><span class="line">    originalInteger = n;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 翻转</span></span><br><span class="line">    <span class="keyword">while</span>( n!=<span class="number">0</span> )</span><br><span class="line">    &#123;</span><br><span class="line">        remainder = n%<span class="number">10</span>;</span><br><span class="line">        reversedInteger = reversedInteger*<span class="number">10</span> + remainder;</span><br><span class="line">        n /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 判断</span></span><br><span class="line">    <span class="keyword">if</span> (originalInteger == reversedInteger)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d 是回文数。"</span>, originalInteger);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d 不是回文数。"</span>, originalInteger);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      </div>
+        
+          <section class="meta" id="footer-meta">
+            <hr>
+            <div class="new-meta-box">
+              
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-01T12:28:57+08:00">
+                  <a class="notlink">
+                    <i class="fas fa-save" aria-hidden="true"></i>
+                    2019-04-01
+                  </a>
+                </div>
+              
+              
+                
+                <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Algorithm/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;Algorithm</a></div>
+              
+              
+            </div>
+          </section>
         
 
         
-            <div class="full-width auto-padding tags">
+            <div class="prev-next">
                 
-                    <a href="/tags/Algorithm/"><i class="fas fa-hashtag fa-fw"></i>Algorithm</a>
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous</h6>
+                            <h4>
+                                <a href="/2019/04/01/能被3整除且至少有一位数字是5/" rel="prev" title="能被3整除且至少有一位数字是5">
+                                  
+                                      能被3整除且至少有一位数字是5
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/Algorithm-NOIP普及组/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Algorithm NOIP普及组</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/04/01/判断数字是几位数/" rel="prev" title="判断数字是几位数">
+                                    
+                                        判断数字是几位数
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/Algorithm/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Algorithm</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
                 
             </div>
         
+
     </section>
+
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/01/判断数字是几位数/">
-              
-                  判断数字是几位数
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            John Doe
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-01
-          </a>
-        </div>
-      
-      
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-    <section class="article typo">
-        <p>用户输入数字，判断该数字是几位数。</p>
-<p>实例</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"输入一个整数: "</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;n);</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">while</span>(n != <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// n = n/10</span></span><br><span class="line">        n /= <span class="number">10</span>;</span><br><span class="line">        ++count;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"数字是 %d 位数。"</span>, count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/Algorithm/"><i class="fas fa-hashtag fa-fw"></i>Algorithm</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/03/31/Greatest-Common-Divisor-Algorithm-md/">
-              
-                  Greatest Common Divisor Algorithm
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            John Doe
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-03-31
-          </a>
-        </div>
-      
-      
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-    <section class="article typo">
-        <h1 id="Greatest-Common-Divisor-Algorithm"><a href="#Greatest-Common-Divisor-Algorithm" class="headerlink" title="Greatest Common Divisor Algorithm"></a>Greatest Common Divisor Algorithm</h1><pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span>
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
 
 
-<span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>{
-    <span class="keyword">int</span> c = a % b;
-    <span class="keyword">if</span> (c != <span class="number">0</span>) {
-        <span class="keyword">return</span> gcd(b, c);
-    } <span class="keyword">else</span> {
-        <span class="keyword">return</span> b;
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+
+
+
+
+<script>
+    window.subData = {
+        title: '判断回文数',
+        tools: true
     }
-
-}
-
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>{
-    <span class="keyword">int</span> a, b;
-    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b);
-
-    <span class="keyword">if</span> (a &gt;= b) {
-        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, gcd(a, b));
-    } <span class="keyword">else</span> {
-        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, gcd(b, a));
-    }
-
-    <span class="keyword">return</span> <span class="number">0</span>;
-}
-</code></pre>
-
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/Algorithm/"><i class="fas fa-hashtag fa-fw"></i>Algorithm</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-            </div>
-          
-        
-      
-
-  </section>
-
-
-
-
-
-
-  
-
-  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-  
-
-  
-
+</script>
 
 
         </div>
