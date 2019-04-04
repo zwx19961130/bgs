@@ -5,20 +5,20 @@
   
 
   
-  <title>判断数字是几位数 | Hexo</title>
+  <title>print char if not told how many | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用户输入数字，判断该数字是几位数。 实例 123456789101112131415161718#include &amp;lt;stdio.h&amp;gt;int main()&amp;#123;    long long n;    int count = 0;     printf(&quot;输入一个整数: &quot;);    scanf(&quot;%lld&quot;, &amp;amp;n);     while(n != 0)    &amp;#123;">
-<meta name="keywords" content="Algorithm">
+  <meta name="description" content="链接：https://ac.nowcoder.com/acm/problem/22224来源：牛客网 题目描述输入一行字符串，原样输出这个字符串。 输入描述:输入一行，包含一个字符串。输出描述:输出一个字符串。示例1输入复制oi er输出复制oi er 1234567891011121314#include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstring&amp;gt;int mai">
+<meta name="keywords" content="Algorithm,NOIP普及组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="判断数字是几位数">
-<meta property="og:url" content="http://yoursite.com/2019/04/01/判断数字是几位数/index.html">
+<meta property="og:title" content="print char if not told how many">
+<meta property="og:url" content="http://yoursite.com/2019/04/03/print-char-if-not-told-how-many/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="用户输入数字，判断该数字是几位数。 实例 123456789101112131415161718#include &amp;lt;stdio.h&amp;gt;int main()&amp;#123;    long long n;    int count = 0;     printf(&quot;输入一个整数: &quot;);    scanf(&quot;%lld&quot;, &amp;amp;n);     while(n != 0)    &amp;#123;">
+<meta property="og:description" content="链接：https://ac.nowcoder.com/acm/problem/22224来源：牛客网 题目描述输入一行字符串，原样输出这个字符串。 输入描述:输入一行，包含一个字符串。输出描述:输出一个字符串。示例1输入复制oi er输出复制oi er 1234567891011121314#include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstring&amp;gt;int mai">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-01T04:29:08.000Z">
+<meta property="og:updated_time" content="2019-04-04T04:37:24.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="判断数字是几位数">
-<meta name="twitter:description" content="用户输入数字，判断该数字是几位数。 实例 123456789101112131415161718#include &amp;lt;stdio.h&amp;gt;int main()&amp;#123;    long long n;    int count = 0;     printf(&quot;输入一个整数: &quot;);    scanf(&quot;%lld&quot;, &amp;amp;n);     while(n != 0)    &amp;#123;">
+<meta name="twitter:title" content="print char if not told how many">
+<meta name="twitter:description" content="链接：https://ac.nowcoder.com/acm/problem/22224来源：牛客网 题目描述输入一行字符串，原样输出这个字符串。 输入描述:输入一行，包含一个字符串。输出描述:输出一个字符串。示例1输入复制oi er输出复制oi er 1234567891011121314#include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstring&amp;gt;int mai">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -65,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-判断数字是几位数" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-print-char-if-not-told-how-many" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/04/01/判断数字是几位数/" class="article-date">
-  <time datetime="2019-04-01T04:13:54.000Z" itemprop="datePublished">2019-04-01</time>
+    <a href="/2019/04/03/print-char-if-not-told-how-many/" class="article-date">
+  <time datetime="2019-04-03T09:21:37.000Z" itemprop="datePublished">2019-04-03</time>
 </a>
     
   </div>
@@ -79,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      判断数字是几位数
+      print char if not told how many
     </h1>
   
 
@@ -87,16 +87,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>用户输入数字，判断该数字是几位数。</p>
-<p>实例</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"输入一个整数: "</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;n);</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">while</span>(n != <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// n = n/10</span></span><br><span class="line">        n /= <span class="number">10</span>;</span><br><span class="line">        ++count;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"数字是 %d 位数。"</span>, count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>链接：<a href="https://ac.nowcoder.com/acm/problem/22224" target="_blank" rel="noopener">https://ac.nowcoder.com/acm/problem/22224</a><br>来源：牛客网</p>
+<p>题目描述<br>输入一行字符串，原样输出这个字符串。</p>
+<p>输入描述:<br>输入一行，包含一个字符串。<br>输出描述:<br>输出一个字符串。<br>示例1<br>输入<br>复制<br>oi er<br>输出<br>复制<br>oi er</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// freopen("input.txt", "r", stdin);</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> ((c = getchar()) != EOF) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%c"</span>, c);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/01/判断数字是几位数/" data-id="cju25jenb0007bwvzxcswkmnn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/03/print-char-if-not-told-how-many/" data-id="cju25jenc000abwvziw73zm4f" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NOIP普及组/">NOIP普及组</a></li></ul>
 
     </footer>
   </div>
@@ -104,19 +105,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/04/01/判断回文数/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/04/04/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          判断回文数
+          Hello World
         
       </div>
     </a>
   
   
-    <a href="/2019/03/31/Greatest-Common-Divisor-Algorithm-md/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/04/01/输出金字塔图形/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Greatest Common Divisor Algorithm</div>
+      <div class="article-nav-title">输出金字塔图形</div>
     </a>
   
 </nav>
