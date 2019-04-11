@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>printf输出时%d前显示特定0</title>
+      <link href="/2019/04/11/printf%E8%BE%93%E5%87%BA%E6%97%B6-d%E5%89%8D%E6%98%BE%E7%A4%BA%E7%89%B9%E5%AE%9A0/"/>
+      <url>/2019/04/11/printf%E8%BE%93%E5%87%BA%E6%97%B6-d%E5%89%8D%E6%98%BE%E7%A4%BA%E7%89%B9%E5%AE%9A0/</url>
+      
+        <content type="html"><![CDATA[<p>printf()函数输出的时候可以用</p><p>printf(“%03d”, x);</p><p>这种方式使得比如说<br>x == 9，那么输出009<br>x == 15，那么输出015<br>x == 385，那么输出385</p><p>掌握以下这个小技巧</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> tricks </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>软件学院本科生应该怎么学习</title>
       <link href="/2019/04/06/%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2%E6%9C%AC%E7%A7%91%E7%94%9F%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%AD%A6%E4%B9%A0/"/>
       <url>/2019/04/06/%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2%E6%9C%AC%E7%A7%91%E7%94%9F%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%AD%A6%E4%B9%A0/</url>

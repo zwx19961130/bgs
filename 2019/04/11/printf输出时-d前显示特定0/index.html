@@ -5,20 +5,20 @@
   
 
   
-  <title>leetcode简单 104 | Blog</title>
+  <title>printf输出时%d前显示特定0 | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这个题已经写了好几遍了，就是求二叉树的高度的问题。一定要背下来。经常考。12345678910111213141516171819class Solution &amp;#123;public:    int maxDepth(TreeNode* root) &amp;#123;                // 如果root为空        if (root == NULL)        &amp;#123;">
-<meta name="keywords" content="Algorithm,leetcode,leetcode简单">
+  <meta name="description" content="printf()函数输出的时候可以用 printf(“%03d”, x); 这种方式使得比如说x == 9，那么输出009x == 15，那么输出015x == 385，那么输出385 掌握以下这个小技巧">
+<meta name="keywords" content="Algorithm,tricks">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode简单 104">
-<meta property="og:url" content="http://yoursite.com/2019/04/05/leetcode简单-104/index.html">
+<meta property="og:title" content="printf输出时%d前显示特定0">
+<meta property="og:url" content="http://yoursite.com/2019/04/11/printf输出时-d前显示特定0/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="这个题已经写了好几遍了，就是求二叉树的高度的问题。一定要背下来。经常考。12345678910111213141516171819class Solution &amp;#123;public:    int maxDepth(TreeNode* root) &amp;#123;                // 如果root为空        if (root == NULL)        &amp;#123;">
+<meta property="og:description" content="printf()函数输出的时候可以用 printf(“%03d”, x); 这种方式使得比如说x == 9，那么输出009x == 15，那么输出015x == 385，那么输出385 掌握以下这个小技巧">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-05T05:56:55.567Z">
+<meta property="og:updated_time" content="2019-04-11T09:53:27.177Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode简单 104">
-<meta name="twitter:description" content="这个题已经写了好几遍了，就是求二叉树的高度的问题。一定要背下来。经常考。12345678910111213141516171819class Solution &amp;#123;public:    int maxDepth(TreeNode* root) &amp;#123;                // 如果root为空        if (root == NULL)        &amp;#123;">
+<meta name="twitter:title" content="printf输出时%d前显示特定0">
+<meta name="twitter:description" content="printf()函数输出的时候可以用 printf(“%03d”, x); 这种方式使得比如说x == 9，那么输出009x == 15，那么输出015x == 385，那么输出385 掌握以下这个小技巧">
   
     <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
   
@@ -65,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-leetcode简单-104" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-printf输出时-d前显示特定0" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/04/05/leetcode简单-104/" class="article-date">
-  <time datetime="2019-04-05T05:56:04.000Z" itemprop="datePublished">2019-04-05</time>
+    <a href="/2019/04/11/printf输出时-d前显示特定0/" class="article-date">
+  <time datetime="2019-04-11T09:51:09.000Z" itemprop="datePublished">2019-04-11</time>
 </a>
     
   </div>
@@ -79,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      leetcode简单 104
+      printf输出时%d前显示特定0
     </h1>
   
 
@@ -87,15 +87,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这个题已经写了好几遍了，就是求二叉树的高度的问题。<br>一定要背下来。经常考。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 如果root为空</span></span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (root-&gt;left == <span class="literal">NULL</span> &amp;&amp; root-&gt;right == <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> + max(maxDepth(root-&gt;left), maxDepth(root-&gt;right));</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+        <p>printf()函数输出的时候可以用</p>
+<p>printf(“%03d”, x);</p>
+<p>这种方式使得比如说<br>x == 9，那么输出009<br>x == 15，那么输出015<br>x == 385，那么输出385</p>
+<p>掌握以下这个小技巧</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/05/leetcode简单-104/" data-id="cjucgt9g80009sovz1on05645" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/11/printf输出时-d前显示特定0/" data-id="cjucgt9gj000ksovzdxyrdoun" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode简单/">leetcode简单</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tricks/">tricks</a></li></ul>
 
     </footer>
   </div>
@@ -103,19 +106,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/04/06/软件学院本科生应该怎么学习/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          软件学院本科生应该怎么学习
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/04/05/leetcode简单-237/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/04/06/软件学院本科生应该怎么学习/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">leetcode简单 237</div>
+      <div class="article-nav-title">软件学院本科生应该怎么学习</div>
     </a>
   
 </nav>
