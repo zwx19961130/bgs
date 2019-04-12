@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>MongoDB 安装经历</title>
+      <link href="/blog/2019/04/12/MongoDB-%E5%AE%89%E8%A3%85%E7%BB%8F%E5%8E%86/"/>
+      <url>/blog/2019/04/12/MongoDB-%E5%AE%89%E8%A3%85%E7%BB%8F%E5%8E%86/</url>
+      
+        <content type="html"><![CDATA[<p>首先判断自己的Linux系统是什么型号，可以用 lse_release 命令看, LSB代表(Linux Standard Base)。<br>如果没有这个命令就用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/issue</span><br></pre></td></tr></table></figure></p><p>查看</p><p>Ubuntu别名和版本的信息如下</p><p>之后从这个网站<br><a href="https://www.mongodb.com/download-center/community?jmp=docs" target="_blank" rel="noopener">https://www.mongodb.com/download-center/community?jmp=docs</a><br>选择对应的.tar.gz安装包。下载完后解压。</p><h2 id="将bin文件夹添加至PATH环境变量中"><a href="#将bin文件夹添加至PATH环境变量中" class="headerlink" title="将bin文件夹添加至PATH环境变量中"></a>将bin文件夹添加至PATH环境变量中</h2><p>编辑~/.bashrc文件，在最后一行添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=&lt;mongodb-install-directory&gt;/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></p><p>之后输入如下命令更新<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></p><p>运行 mongod 前，需要创建一个文件夹用于 MongoDB 写入数据。默认情况下，MongoDB 往 /data/db文件夹中写入数据，此处我直接创建该目录：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir  /data/db</span><br></pre></td></tr></table></figure></p><h2 id="更改文件夹权限"><a href="#更改文件夹权限" class="headerlink" title="更改文件夹权限"></a>更改文件夹权限</h2><p>这里注意刚创建出来的/data/db文件夹是只读的。我们使用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 /data/db</span><br></pre></td></tr></table></figure></p><p>命令使得文件夹可以</p><p>read - 4</p><p>write - 2</p><p>execute - 1</p><h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>然后在前台输入mongod命令即可</p><p>注意连接字符串connection string为mongodb://10.251.254.184:27017<br>不要忘了mongodb://</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Database </tag>
+            
+            <tag> MongoDB </tag>
+            
+            <tag> installation </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>printf输出时%d前显示特定0</title>
       <link href="/blog/2019/04/11/printf%E8%BE%93%E5%87%BA%E6%97%B6-d%E5%89%8D%E6%98%BE%E7%A4%BA%E7%89%B9%E5%AE%9A0/"/>
       <url>/blog/2019/04/11/printf%E8%BE%93%E5%87%BA%E6%97%B6-d%E5%89%8D%E6%98%BE%E7%A4%BA%E7%89%B9%E5%AE%9A0/</url>

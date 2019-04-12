@@ -62,6 +62,58 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-MongoDB-安装经历" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/04/12/MongoDB-安装经历/" class="article-date">
+  <time datetime="2019-04-12T08:55:50.000Z" itemprop="datePublished">2019-04-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/04/12/MongoDB-安装经历/">MongoDB 安装经历</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先判断自己的Linux系统是什么型号，可以用 lse_release 命令看, LSB代表(Linux Standard Base)。<br>如果没有这个命令就用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/issue</span><br></pre></td></tr></table></figure></p>
+<p>查看</p>
+<p>Ubuntu别名和版本的信息如下</p>
+<p>之后从这个网站<br><a href="https://www.mongodb.com/download-center/community?jmp=docs" target="_blank" rel="noopener">https://www.mongodb.com/download-center/community?jmp=docs</a><br>选择对应的.tar.gz安装包。下载完后解压。</p>
+<h2 id="将bin文件夹添加至PATH环境变量中"><a href="#将bin文件夹添加至PATH环境变量中" class="headerlink" title="将bin文件夹添加至PATH环境变量中"></a>将bin文件夹添加至PATH环境变量中</h2><p>编辑~/.bashrc文件，在最后一行添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=&lt;mongodb-install-directory&gt;/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></p>
+<p>之后输入如下命令更新<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></p>
+<p>运行 mongod 前，需要创建一个文件夹用于 MongoDB 写入数据。默认情况下，MongoDB 往 /data/db文件夹中写入数据，此处我直接创建该目录：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir  /data/db</span><br></pre></td></tr></table></figure></p>
+<h2 id="更改文件夹权限"><a href="#更改文件夹权限" class="headerlink" title="更改文件夹权限"></a>更改文件夹权限</h2><p>这里注意刚创建出来的/data/db文件夹是只读的。我们使用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 /data/db</span><br></pre></td></tr></table></figure></p>
+<p>命令使得文件夹可以</p>
+<p>read - 4</p>
+<p>write - 2</p>
+<p>execute - 1</p>
+<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>然后在前台输入mongod命令即可</p>
+<p>注意连接字符串connection string为mongodb://10.251.254.184:27017<br>不要忘了mongodb://</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2019/04/12/MongoDB-安装经历/" data-id="cjudunqx7000128vzmveakrex" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Database/">Database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/MongoDB/">MongoDB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/installation/">installation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-printf输出时-d前显示特定0" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2019/04/11/printf输出时-d前显示特定0/" class="article-date">
@@ -92,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/11/printf输出时-d前显示特定0/" data-id="cjucgyol9000l5svz5db6x3bz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/11/printf输出时-d前显示特定0/" data-id="cjudunqxv000j28vz3gh3i5il" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/tricks/">tricks</a></li></ul>
@@ -169,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/06/软件学院本科生应该怎么学习/" data-id="cjucgyom9001u5svzf5cmplkx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/06/软件学院本科生应该怎么学习/" data-id="cjudunqyh001z28vzra69c15i" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/过来人谈学习方法/">过来人谈学习方法</a></li></ul>
@@ -208,7 +260,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/05/leetcode简单-104/" data-id="cjucgyoko00095svzhnmlo24s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/05/leetcode简单-104/" data-id="cjudunqxl000c28vzqolg3u1s" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/leetcode/">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/leetcode简单/">leetcode简单</a></li></ul>
@@ -248,7 +300,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/05/leetcode简单-237/" data-id="cjucgyokr000b5svzqn3cbaxc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/05/leetcode简单-237/" data-id="cjudunqxk000b28vzxa9c4ohn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/leetcode/">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/leetcode简单/">leetcode简单</a></li></ul>
@@ -287,7 +339,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/05/leetcode简单-709/" data-id="cjucgyokw000c5svz4lsjblt9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/05/leetcode简单-709/" data-id="cjudunqxo000e28vzv7zjhnau" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/leetcode/">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/leetcode简单/">leetcode简单</a></li></ul>
@@ -327,7 +379,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/05/leetcode简单-771/" data-id="cjucgyol0000e5svzuktlp0b1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/05/leetcode简单-771/" data-id="cjudunqxt000h28vz6jfzrpk4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/leetcode/">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/leetcode简单/">leetcode简单</a></li></ul>
@@ -369,7 +421,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/05/基础堆算法/" data-id="cjucgyole000s5svz6ug8vfm8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/05/基础堆算法/" data-id="cjudunqy2000x28vzhjl1a1mb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/heap/">heap</a></li></ul>
@@ -407,7 +459,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/04/binary-search-template/" data-id="cjucgyok900015svz981vu33w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/04/binary-search-template/" data-id="cjudunqxi000828vzd99ajnci" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/二分查找/">二分查找</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/模板/">模板</a></li></ul>
@@ -445,52 +497,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/04/class-Solution/" data-id="cjucgyokj00065svztc1vrdxm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2019/04/04/hello-world/" class="article-date">
-  <time datetime="2019-04-04T04:28:25.009Z" itemprop="datePublished">2019-04-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2019/04/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/04/hello-world/" data-id="cjucgyokm00085svz4wk21zba" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/04/class-Solution/" data-id="cjudunqxj000928vzuxhdq9wz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -518,7 +525,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/NOIP普及组/">NOIP普及组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/heap/">heap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/leetcode/">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/leetcode简单/">leetcode简单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/tricks/">tricks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/二分查找/">二分查找</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/模板/">模板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/过来人谈学习方法/">过来人谈学习方法</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Database/">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MongoDB/">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/NOIP普及组/">NOIP普及组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/heap/">heap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/installation/">installation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/leetcode/">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/leetcode简单/">leetcode简单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/tricks/">tricks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/二分查找/">二分查找</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/模板/">模板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/过来人谈学习方法/">过来人谈学习方法</a></li></ul>
     </div>
   </div>
 
@@ -528,7 +535,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/blog/tags/Algorithm-NOIP普及组/" style="font-size: 16.67px;">Algorithm NOIP普及组</a> <a href="/blog/tags/NOIP普及组/" style="font-size: 13.33px;">NOIP普及组</a> <a href="/blog/tags/heap/" style="font-size: 10px;">heap</a> <a href="/blog/tags/leetcode/" style="font-size: 16.67px;">leetcode</a> <a href="/blog/tags/leetcode简单/" style="font-size: 16.67px;">leetcode简单</a> <a href="/blog/tags/tricks/" style="font-size: 10px;">tricks</a> <a href="/blog/tags/二分查找/" style="font-size: 10px;">二分查找</a> <a href="/blog/tags/模板/" style="font-size: 10px;">模板</a> <a href="/blog/tags/过来人谈学习方法/" style="font-size: 10px;">过来人谈学习方法</a>
+      <a href="/blog/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/blog/tags/Algorithm-NOIP普及组/" style="font-size: 16.67px;">Algorithm NOIP普及组</a> <a href="/blog/tags/Database/" style="font-size: 10px;">Database</a> <a href="/blog/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/blog/tags/NOIP普及组/" style="font-size: 13.33px;">NOIP普及组</a> <a href="/blog/tags/heap/" style="font-size: 10px;">heap</a> <a href="/blog/tags/installation/" style="font-size: 10px;">installation</a> <a href="/blog/tags/leetcode/" style="font-size: 16.67px;">leetcode</a> <a href="/blog/tags/leetcode简单/" style="font-size: 16.67px;">leetcode简单</a> <a href="/blog/tags/tricks/" style="font-size: 10px;">tricks</a> <a href="/blog/tags/二分查找/" style="font-size: 10px;">二分查找</a> <a href="/blog/tags/模板/" style="font-size: 10px;">模板</a> <a href="/blog/tags/过来人谈学习方法/" style="font-size: 10px;">过来人谈学习方法</a>
     </div>
   </div>
 
@@ -550,6 +557,10 @@
       <ul>
         
           <li>
+            <a href="/blog/2019/04/12/MongoDB-安装经历/">MongoDB 安装经历</a>
+          </li>
+        
+          <li>
             <a href="/blog/2019/04/11/printf输出时-d前显示特定0/">printf输出时%d前显示特定0</a>
           </li>
         
@@ -563,10 +574,6 @@
         
           <li>
             <a href="/blog/2019/04/05/leetcode简单-237/">leetcode简单 237</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2019/04/05/leetcode简单-709/">leetcode简单 709</a>
           </li>
         
       </ul>

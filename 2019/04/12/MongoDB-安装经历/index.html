@@ -5,15 +5,20 @@
   
 
   
-  <title>Tag: Algorithm | Blog</title>
+  <title>MongoDB 安装经历 | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Blog">
-<meta property="og:url" content="http://yoursite.com/blog/tags/Algorithm/index.html">
+  <meta name="description" content="首先判断自己的Linux系统是什么型号，可以用 lse_release 命令看, LSB代表(Linux Standard Base)。如果没有这个命令就用1cat /etc/issue 查看 Ubuntu别名和版本的信息如下 之后从这个网站https://www.mongodb.com/download-center/community?jmp=docs选择对应的.tar.gz安装包。下载完后解">
+<meta name="keywords" content="Database,MongoDB,installation">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB 安装经历">
+<meta property="og:url" content="http://yoursite.com/blog/2019/04/12/MongoDB-安装经历/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="首先判断自己的Linux系统是什么型号，可以用 lse_release 命令看, LSB代表(Linux Standard Base)。如果没有这个命令就用1cat /etc/issue 查看 Ubuntu别名和版本的信息如下 之后从这个网站https://www.mongodb.com/download-center/community?jmp=docs选择对应的.tar.gz安装包。下载完后解">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-12T09:08:44.087Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog">
+<meta name="twitter:title" content="MongoDB 安装经历">
+<meta name="twitter:description" content="首先判断自己的Linux系统是什么型号，可以用 lse_release 命令看, LSB代表(Linux Standard Base)。如果没有这个命令就用1cat /etc/issue 查看 Ubuntu别名和版本的信息如下 之后从这个网站https://www.mongodb.com/download-center/community?jmp=docs选择对应的.tar.gz安装包。下载完后解">
   
     <link rel="alternate" href="/blog/atom.xml" title="Blog" type="application/atom+xml">
   
@@ -60,216 +65,67 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/04/11/printf输出时-d前显示特定0/" class="archive-article-date">
-  <time datetime="2019-04-11T09:51:09.000Z" itemprop="datePublished">Apr 11</time>
+        <section id="main"><article id="post-MongoDB-安装经历" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/04/12/MongoDB-安装经历/" class="article-date">
+  <time datetime="2019-04-12T08:55:50.000Z" itemprop="datePublished">2019-04-12</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/04/11/printf输出时-d前显示特定0/">printf输出时%d前显示特定0</a>
+    <h1 class="article-title" itemprop="name">
+      MongoDB 安装经历
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/04/05/leetcode简单-104/" class="archive-article-date">
-  <time datetime="2019-04-05T05:56:04.000Z" itemprop="datePublished">Apr 5</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/04/05/leetcode简单-104/">leetcode简单 104</a>
-    </h1>
-  
+        <p>首先判断自己的Linux系统是什么型号，可以用 lse_release 命令看, LSB代表(Linux Standard Base)。<br>如果没有这个命令就用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/issue</span><br></pre></td></tr></table></figure></p>
+<p>查看</p>
+<p>Ubuntu别名和版本的信息如下</p>
+<p>之后从这个网站<br><a href="https://www.mongodb.com/download-center/community?jmp=docs" target="_blank" rel="noopener">https://www.mongodb.com/download-center/community?jmp=docs</a><br>选择对应的.tar.gz安装包。下载完后解压。</p>
+<h2 id="将bin文件夹添加至PATH环境变量中"><a href="#将bin文件夹添加至PATH环境变量中" class="headerlink" title="将bin文件夹添加至PATH环境变量中"></a>将bin文件夹添加至PATH环境变量中</h2><p>编辑~/.bashrc文件，在最后一行添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=&lt;mongodb-install-directory&gt;/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></p>
+<p>之后输入如下命令更新<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></p>
+<p>运行 mongod 前，需要创建一个文件夹用于 MongoDB 写入数据。默认情况下，MongoDB 往 /data/db文件夹中写入数据，此处我直接创建该目录：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir  /data/db</span><br></pre></td></tr></table></figure></p>
+<h2 id="更改文件夹权限"><a href="#更改文件夹权限" class="headerlink" title="更改文件夹权限"></a>更改文件夹权限</h2><p>这里注意刚创建出来的/data/db文件夹是只读的。我们使用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 /data/db</span><br></pre></td></tr></table></figure></p>
+<p>命令使得文件夹可以</p>
+<p>read - 4</p>
+<p>write - 2</p>
+<p>execute - 1</p>
+<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>然后在前台输入mongod命令即可</p>
+<p>注意连接字符串connection string为mongodb://10.251.254.184:27017<br>不要忘了mongodb://</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/04/05/leetcode简单-237/" class="archive-article-date">
-  <time datetime="2019-04-05T05:49:33.000Z" itemprop="datePublished">Apr 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/04/05/leetcode简单-237/">leetcode简单 237</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/04/05/leetcode简单-709/" class="archive-article-date">
-  <time datetime="2019-04-05T05:35:10.000Z" itemprop="datePublished">Apr 5</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2019/04/12/MongoDB-安装经历/" data-id="cjudunqx7000128vzmveakrex" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/04/05/leetcode简单-709/">leetcode简单 709</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/04/05/leetcode简单-771/" class="archive-article-date">
-  <time datetime="2019-04-05T05:28:32.000Z" itemprop="datePublished">Apr 5</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/04/05/leetcode简单-771/">leetcode简单 771</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Database/">Database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/MongoDB/">MongoDB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/installation/">installation</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2019/04/11/printf输出时-d前显示特定0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">printf输出时%d前显示特定0</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/04/05/基础堆算法/" class="archive-article-date">
-  <time datetime="2019-04-05T04:54:44.000Z" itemprop="datePublished">Apr 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/04/05/基础堆算法/">基础堆算法</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/04/04/binary-search-template/" class="archive-article-date">
-  <time datetime="2019-04-04T05:28:21.000Z" itemprop="datePublished">Apr 4</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/04/04/binary-search-template/">binary search template</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/04/03/print-char-if-not-told-how-many/" class="archive-article-date">
-  <time datetime="2019-04-03T09:21:37.000Z" itemprop="datePublished">Apr 3</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/04/03/print-char-if-not-told-how-many/">print char if not told how many</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/04/01/n元人民币换成1元2元5元的零钱共有多少种兑换方法/" class="archive-article-date">
-  <time datetime="2019-04-01T04:57:31.000Z" itemprop="datePublished">Apr 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/04/01/n元人民币换成1元2元5元的零钱共有多少种兑换方法/">n元人民币换成1元2元5元的零钱共有多少种兑换方法</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/2019/04/01/判断回文数/" class="archive-article-date">
-  <time datetime="2019-04-01T04:27:08.000Z" itemprop="datePublished">Apr 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2019/04/01/判断回文数/">判断回文数</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/blog/tags/Algorithm/page/2/">2</a><a class="extend next" rel="next" href="/blog/tags/Algorithm/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         
