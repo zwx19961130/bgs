@@ -62,6 +62,80 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-binary-search-template" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/04/04/binary-search-template/" class="article-date">
+  <time datetime="2019-04-04T05:28:21.000Z" itemprop="datePublished">2019-04-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/04/04/binary-search-template/">binary search template</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * @param nums: The integer array.</span></span><br><span class="line"><span class="comment">     * @param target: Target to find.</span></span><br><span class="line"><span class="comment">     * @return: The first position of target. Position starts from 0.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (nums.size() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> end = nums.size() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> mid;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (start + <span class="number">1</span> &lt; end) &#123;</span><br><span class="line">            mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (nums[mid] == target) &#123;</span><br><span class="line">                end = mid;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid] &lt; target) &#123;</span><br><span class="line">                start = mid;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid] &gt; target) &#123;</span><br><span class="line">                end = mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (nums[start] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> start;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (nums[end] == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> end;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2019/04/04/binary-search-template/" data-id="cjugh8xy9000brovzprzbzcht" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/二分查找/">二分查找</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/模板/">模板</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-class-Solution" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/04/04/class-Solution/" class="article-date">
+  <time datetime="2019-04-04T05:27:59.000Z" itemprop="datePublished">2019-04-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/04/04/class-Solution/">class Solution {</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2019/04/04/class-Solution/" data-id="cjugh8xy80009rovzfbxwn6vn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2019/04/04/hello-world/" class="article-date">
@@ -97,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/04/hello-world/" data-id="cjudunqxq000f28vzjrilyorz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/04/hello-world/" data-id="cjugh8xya000crovzhbz7a846" class="article-share-link">Share</a>
       
       
     </footer>
@@ -136,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/03/print-char-if-not-told-how-many/" data-id="cjudunqxx000o28vzt6rqx1u7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/03/print-char-if-not-told-how-many/" data-id="cjugh8xyl000provz05qckdfk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/NOIP普及组/">NOIP普及组</a></li></ul>
@@ -234,7 +308,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/输出金字塔图形/" data-id="cjudunqy3000z28vztzitepvy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/01/输出金字塔图形/" data-id="cjugh8xyt0013rovzoo1iv1yn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li></ul>
@@ -284,7 +358,7 @@ all-NO
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/选村长/" data-id="cjudunqyi002028vz2a2ok6ct" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/01/选村长/" data-id="cjugh8xyt0015rovzo6b3rip3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li></ul>
@@ -326,7 +400,7 @@ all-NO
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/n元人民币换成1元2元5元的零钱共有多少种兑换方法/" data-id="cjudunqxw000l28vz5xngjsw6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/01/n元人民币换成1元2元5元的零钱共有多少种兑换方法/" data-id="cjugh8xyg000jrovzxxw9mx58" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/NOIP普及组/">NOIP普及组</a></li></ul>
@@ -377,7 +451,7 @@ Output: 55
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/Sum-of-all-proper-divisors-of-a-natural-number/" data-id="cjudunqxe000428vz15ajx8t3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/01/Sum-of-all-proper-divisors-of-a-natural-number/" data-id="cjugh8xy40005rovze8xp5jmz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li></ul>
@@ -423,7 +497,7 @@ Output: 55
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/能被3整除且至少有一位数字是5/" data-id="cjudunqy1000u28vz4o9enevm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/01/能被3整除且至少有一位数字是5/" data-id="cjugh8xyo000wrovzxiypmpnj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li></ul>
@@ -464,111 +538,7 @@ Output: 55
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/判断回文数/" data-id="cjudunqxz000q28vz4pofhch7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-判断数字是几位数" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2019/04/01/判断数字是几位数/" class="article-date">
-  <time datetime="2019-04-01T04:13:54.000Z" itemprop="datePublished">2019-04-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2019/04/01/判断数字是几位数/">判断数字是几位数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>用户输入数字，判断该数字是几位数。</p>
-<p>实例</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> n;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"输入一个整数: "</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;n);</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">while</span>(n != <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// n = n/10</span></span><br><span class="line">        n /= <span class="number">10</span>;</span><br><span class="line">        ++count;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"数字是 %d 位数。"</span>, count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/判断数字是几位数/" data-id="cjudunqy0000s28vzfzuzq2yv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Greatest-Common-Divisor-Algorithm-md" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2019/03/31/Greatest-Common-Divisor-Algorithm-md/" class="article-date">
-  <time datetime="2019-03-30T19:20:24.000Z" itemprop="datePublished">2019-03-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2019/03/31/Greatest-Common-Divisor-Algorithm-md/">Greatest Common Divisor Algorithm</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Greatest-Common-Divisor-Algorithm"><a href="#Greatest-Common-Divisor-Algorithm" class="headerlink" title="Greatest Common Divisor Algorithm"></a>Greatest Common Divisor Algorithm</h1><pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span>
-
-
-<span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>{
-    <span class="keyword">int</span> c = a % b;
-    <span class="keyword">if</span> (c != <span class="number">0</span>) {
-        <span class="keyword">return</span> gcd(b, c);
-    } <span class="keyword">else</span> {
-        <span class="keyword">return</span> b;
-    }
-
-}
-
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>{
-    <span class="keyword">int</span> a, b;
-    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b);
-
-    <span class="keyword">if</span> (a &gt;= b) {
-        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, gcd(a, b));
-    } <span class="keyword">else</span> {
-        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, gcd(b, a));
-    }
-
-    <span class="keyword">return</span> <span class="number">0</span>;
-}
-</code></pre>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/03/31/Greatest-Common-Divisor-Algorithm-md/" data-id="cjudunqx0000028vzxgqs8zup" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/01/判断回文数/" data-id="cjugh8xyp000yrovzdi8v9ajs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li></ul>
@@ -598,7 +568,7 @@ Output: 55
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Database/">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MongoDB/">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/NOIP普及组/">NOIP普及组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/heap/">heap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/installation/">installation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/leetcode/">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/leetcode简单/">leetcode简单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/tricks/">tricks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/二分查找/">二分查找</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/模板/">模板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/过来人谈学习方法/">过来人谈学习方法</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Database/">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Memory/">Memory</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MongoDB/">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/NOIP普及组/">NOIP普及组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/heap/">heap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/installation/">installation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/leetcode/">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/leetcode简单/">leetcode简单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/queue/">queue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/stack/">stack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/tricks/">tricks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/二分查找/">二分查找</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/剑指offer/">剑指offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/模板/">模板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/过来人谈学习方法/">过来人谈学习方法</a></li></ul>
     </div>
   </div>
 
@@ -608,7 +578,7 @@ Output: 55
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/blog/tags/Algorithm-NOIP普及组/" style="font-size: 16.67px;">Algorithm NOIP普及组</a> <a href="/blog/tags/Database/" style="font-size: 10px;">Database</a> <a href="/blog/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/blog/tags/NOIP普及组/" style="font-size: 13.33px;">NOIP普及组</a> <a href="/blog/tags/heap/" style="font-size: 10px;">heap</a> <a href="/blog/tags/installation/" style="font-size: 10px;">installation</a> <a href="/blog/tags/leetcode/" style="font-size: 16.67px;">leetcode</a> <a href="/blog/tags/leetcode简单/" style="font-size: 16.67px;">leetcode简单</a> <a href="/blog/tags/tricks/" style="font-size: 10px;">tricks</a> <a href="/blog/tags/二分查找/" style="font-size: 10px;">二分查找</a> <a href="/blog/tags/模板/" style="font-size: 10px;">模板</a> <a href="/blog/tags/过来人谈学习方法/" style="font-size: 10px;">过来人谈学习方法</a>
+      <a href="/blog/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/blog/tags/Algorithm-NOIP普及组/" style="font-size: 16.67px;">Algorithm NOIP普及组</a> <a href="/blog/tags/Database/" style="font-size: 10px;">Database</a> <a href="/blog/tags/Java/" style="font-size: 10px;">Java</a> <a href="/blog/tags/Memory/" style="font-size: 10px;">Memory</a> <a href="/blog/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/blog/tags/NOIP普及组/" style="font-size: 13.33px;">NOIP普及组</a> <a href="/blog/tags/heap/" style="font-size: 10px;">heap</a> <a href="/blog/tags/installation/" style="font-size: 10px;">installation</a> <a href="/blog/tags/leetcode/" style="font-size: 16.67px;">leetcode</a> <a href="/blog/tags/leetcode简单/" style="font-size: 16.67px;">leetcode简单</a> <a href="/blog/tags/queue/" style="font-size: 10px;">queue</a> <a href="/blog/tags/stack/" style="font-size: 10px;">stack</a> <a href="/blog/tags/tricks/" style="font-size: 10px;">tricks</a> <a href="/blog/tags/二分查找/" style="font-size: 10px;">二分查找</a> <a href="/blog/tags/剑指offer/" style="font-size: 10px;">剑指offer</a> <a href="/blog/tags/模板/" style="font-size: 10px;">模板</a> <a href="/blog/tags/过来人谈学习方法/" style="font-size: 10px;">过来人谈学习方法</a>
     </div>
   </div>
 
@@ -630,6 +600,14 @@ Output: 55
       <ul>
         
           <li>
+            <a href="/blog/2019/04/14/两个栈实现队列/">两个栈实现队列</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2019/04/12/Java-中面向对象与内存解析/">Java 中面向对象与内存解析</a>
+          </li>
+        
+          <li>
             <a href="/blog/2019/04/12/MongoDB-安装经历/">MongoDB 安装经历</a>
           </li>
         
@@ -639,14 +617,6 @@ Output: 55
         
           <li>
             <a href="/blog/2019/04/06/软件学院本科生应该怎么学习/">软件学院本科生应该怎么学习</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2019/04/05/leetcode简单-104/">leetcode简单 104</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2019/04/05/leetcode简单-237/">leetcode简单 237</a>
           </li>
         
       </ul>

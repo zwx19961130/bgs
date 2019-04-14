@@ -5,20 +5,20 @@
   
 
   
-  <title>Greatest Common Divisor Algorithm | Blog</title>
+  <title>Java 中面向对象与内存解析 | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Greatest Common Divisor Algorithm#include &amp;lt;cstdio&amp;gt;   int gcd(int a, int b) {     int c = a % b;     if (c != 0) {         return gcd(b, c);     } else {         return b;     }  }  int main() {">
-<meta name="keywords" content="Algorithm">
+  <meta name="description" content="Java中局部变量i必须要初始化，否则javac编译时报错；成员变量（一个类的private成员）可以不初始化，默认分配为012345678910public class Dog &amp;#123;    static int age;    public static void main(String[] args) &amp;#123;        int i;        System.out.pri">
+<meta name="keywords" content="Java,Memory">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Greatest Common Divisor Algorithm">
-<meta property="og:url" content="http://yoursite.com/blog/2019/03/31/Greatest-Common-Divisor-Algorithm-md/index.html">
+<meta property="og:title" content="Java 中面向对象与内存解析">
+<meta property="og:url" content="http://yoursite.com/blog/2019/04/12/Java-中面向对象与内存解析/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="Greatest Common Divisor Algorithm#include &amp;lt;cstdio&amp;gt;   int gcd(int a, int b) {     int c = a % b;     if (c != 0) {         return gcd(b, c);     } else {         return b;     }  }  int main() {">
+<meta property="og:description" content="Java中局部变量i必须要初始化，否则javac编译时报错；成员变量（一个类的private成员）可以不初始化，默认分配为012345678910public class Dog &amp;#123;    static int age;    public static void main(String[] args) &amp;#123;        int i;        System.out.pri">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-30T19:36:07.000Z">
+<meta property="og:updated_time" content="2019-04-12T15:56:11.338Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Greatest Common Divisor Algorithm">
-<meta name="twitter:description" content="Greatest Common Divisor Algorithm#include &amp;lt;cstdio&amp;gt;   int gcd(int a, int b) {     int c = a % b;     if (c != 0) {         return gcd(b, c);     } else {         return b;     }  }  int main() {">
+<meta name="twitter:title" content="Java 中面向对象与内存解析">
+<meta name="twitter:description" content="Java中局部变量i必须要初始化，否则javac编译时报错；成员变量（一个类的private成员）可以不初始化，默认分配为012345678910public class Dog &amp;#123;    static int age;    public static void main(String[] args) &amp;#123;        int i;        System.out.pri">
   
     <link rel="alternate" href="/blog/atom.xml" title="Blog" type="application/atom+xml">
   
@@ -65,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Greatest-Common-Divisor-Algorithm-md" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Java-中面向对象与内存解析" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2019/03/31/Greatest-Common-Divisor-Algorithm-md/" class="article-date">
-  <time datetime="2019-03-30T19:20:24.000Z" itemprop="datePublished">2019-03-31</time>
+    <a href="/blog/2019/04/12/Java-中面向对象与内存解析/" class="article-date">
+  <time datetime="2019-04-12T09:35:32.000Z" itemprop="datePublished">2019-04-12</time>
 </a>
     
   </div>
@@ -79,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Greatest Common Divisor Algorithm
+      Java 中面向对象与内存解析
     </h1>
   
 
@@ -87,40 +87,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Greatest-Common-Divisor-Algorithm"><a href="#Greatest-Common-Divisor-Algorithm" class="headerlink" title="Greatest Common Divisor Algorithm"></a>Greatest Common Divisor Algorithm</h1><pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span>
-
-
-<span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>{
-    <span class="keyword">int</span> c = a % b;
-    <span class="keyword">if</span> (c != <span class="number">0</span>) {
-        <span class="keyword">return</span> gcd(b, c);
-    } <span class="keyword">else</span> {
-        <span class="keyword">return</span> b;
-    }
-
-}
-
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>{
-    <span class="keyword">int</span> a, b;
-    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b);
-
-    <span class="keyword">if</span> (a &gt;= b) {
-        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, gcd(a, b));
-    } <span class="keyword">else</span> {
-        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, gcd(b, a));
-    }
-
-    <span class="keyword">return</span> <span class="number">0</span>;
-}
-</code></pre>
-
+        <h2 id="Java中局部变量i必须要初始化，否则javac编译时报错；成员变量（一个类的private成员）可以不初始化，默认分配为0"><a href="#Java中局部变量i必须要初始化，否则javac编译时报错；成员变量（一个类的private成员）可以不初始化，默认分配为0" class="headerlink" title="Java中局部变量i必须要初始化，否则javac编译时报错；成员变量（一个类的private成员）可以不初始化，默认分配为0"></a>Java中局部变量i必须要初始化，否则javac编译时报错；成员变量（一个类的private成员）可以不初始化，默认分配为0</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i;</span><br><span class="line">        System.out.println(i); <span class="comment">//报错，i没有有初始化</span></span><br><span class="line">        System.out.println(age); <span class="comment">//输出0</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="堆内存装着所有new出来的东西"><a href="#堆内存装着所有new出来的东西" class="headerlink" title="堆内存装着所有new出来的东西"></a>堆内存装着所有new出来的东西</h2><p>堆内存是动态分配内存的。</p>
+<p>敲javac是编译期间，敲java是运行期间。</p>
+<p>内存有4块：code，data，stack，heap</p>
+<p>类是静态的概念，位于代码区。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">int</span> j;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        C c1 = <span class="keyword">new</span> C(); <span class="comment">// C c1定义了一个局部变量，所以在stack里面。new出来的东西分配在heap里面</span></span><br><span class="line">        C c2 = <span class="keyword">new</span> C();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="静态变量static存放在数据区data-segment"><a href="#静态变量static存放在数据区data-segment" class="headerlink" title="静态变量static存放在数据区data segment"></a>静态变量static存放在数据区data segment</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/03/31/Greatest-Common-Divisor-Algorithm-md/" data-id="cjugh8xxt0000rovz4llf0cmq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/12/Java-中面向对象与内存解析/" data-id="cjugh8xy30004rovzn72tynte" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Memory/">Memory</a></li></ul>
 
     </footer>
   </div>
@@ -128,19 +108,19 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/2019/04/01/判断数字是几位数/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2019/04/14/两个栈实现队列/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          判断数字是几位数
+          两个栈实现队列
         
       </div>
     </a>
   
   
-    <a href="/blog/2019/03/31/Whether-a-binary-tree-is-balanced-or-not-md/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2019/04/12/MongoDB-安装经历/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Whether a binary tree is balanced or not.md</div>
+      <div class="article-nav-title">MongoDB 安装经历</div>
     </a>
   
 </nav>
