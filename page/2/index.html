@@ -62,6 +62,48 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-基础堆算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2019/04/05/基础堆算法/" class="article-date">
+  <time datetime="2019-04-05T04:54:44.000Z" itemprop="datePublished">2019-04-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2019/04/05/基础堆算法/">基础堆算法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">heapify</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> n, <span class="keyword">int</span> i)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">int</span> largest = i; <span class="comment">// Initialize largest as root </span></span><br><span class="line">    <span class="keyword">int</span> l = <span class="number">2</span>*i + <span class="number">1</span>; <span class="comment">// left = 2*i + 1 </span></span><br><span class="line">    <span class="keyword">int</span> r = <span class="number">2</span>*i + <span class="number">2</span>; <span class="comment">// right = 2*i + 2 </span></span><br><span class="line">  </span><br><span class="line">    <span class="comment">// If left child is larger than root </span></span><br><span class="line">    <span class="keyword">if</span> (l &lt; n &amp;&amp; arr[l] &gt; arr[largest]) </span><br><span class="line">        largest = l; </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// If right child is larger than largest so far </span></span><br><span class="line">    <span class="keyword">if</span> (r &lt; n &amp;&amp; arr[r] &gt; arr[largest]) </span><br><span class="line">        largest = r; </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// If largest is not root </span></span><br><span class="line">    <span class="keyword">if</span> (largest != i) </span><br><span class="line">    &#123; </span><br><span class="line">        swap(arr[i], arr[largest]); </span><br><span class="line">  </span><br><span class="line">        <span class="comment">// Recursively heapify the affected sub-tree </span></span><br><span class="line">        heapify(arr, n, largest); </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">buildHeap</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Build heap (rearrange array) </span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n / <span class="number">2</span> - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) </span><br><span class="line">        heapify(arr, n, i); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main function to do heap sort </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">heapSort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> n)</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    buildHeap(arr, n);</span><br><span class="line">  </span><br><span class="line">    <span class="comment">// One by one extract an element from heap </span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=n<span class="number">-1</span>; i&gt;=<span class="number">0</span>; i--) </span><br><span class="line">    &#123; </span><br><span class="line">        <span class="comment">// Move current root to end </span></span><br><span class="line">        swap(arr[<span class="number">0</span>], arr[i]); </span><br><span class="line">  </span><br><span class="line">        <span class="comment">// call max heapify on the reduced heap </span></span><br><span class="line">        heapify(arr, i, <span class="number">0</span>); </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>掌握了这3段程序就能写出堆排序的程序了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/2019/04/05/基础堆算法/" data-id="cjuov58op0010xsvzowiterjr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/heap/">heap</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-binary-search-template" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2019/04/04/binary-search-template/" class="article-date">
@@ -88,7 +130,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/04/binary-search-template/" data-id="cjugh8xy9000brovzprzbzcht" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/04/binary-search-template/" data-id="cjuov58ob0009xsvzbynu1zrh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/二分查找/">二分查找</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/模板/">模板</a></li></ul>
@@ -126,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/04/class-Solution/" data-id="cjugh8xy80009rovzfbxwn6vn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/04/class-Solution/" data-id="cjuov58o60004xsvzpas013dt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -171,7 +213,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/04/hello-world/" data-id="cjugh8xya000crovzhbz7a846" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/04/hello-world/" data-id="cjuov58oh000gxsvzwjck69zd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -210,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/03/print-char-if-not-told-how-many/" data-id="cjugh8xyl000provz05qckdfk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/03/print-char-if-not-told-how-many/" data-id="cjuov58ok000nxsvzhrycrd8o" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/NOIP普及组/">NOIP普及组</a></li></ul>
@@ -308,7 +350,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/输出金字塔图形/" data-id="cjugh8xyt0013rovzoo1iv1yn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/01/输出金字塔图形/" data-id="cjuov58oq0013xsvzr2hpgl4r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li></ul>
@@ -358,7 +400,7 @@ all-NO
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/选村长/" data-id="cjugh8xyt0015rovzo6b3rip3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/01/选村长/" data-id="cjuov58os0017xsvze8vr2r35" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li></ul>
@@ -400,7 +442,7 @@ all-NO
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/n元人民币换成1元2元5元的零钱共有多少种兑换方法/" data-id="cjugh8xyg000jrovzxxw9mx58" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/01/n元人民币换成1元2元5元的零钱共有多少种兑换方法/" data-id="cjuov58oj000kxsvzs6bhnigo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/NOIP普及组/">NOIP普及组</a></li></ul>
@@ -451,7 +493,7 @@ Output: 55
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/Sum-of-all-proper-divisors-of-a-natural-number/" data-id="cjugh8xy40005rovze8xp5jmz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/01/Sum-of-all-proper-divisors-of-a-natural-number/" data-id="cjuov58oa0008xsvzgdly8kx7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li></ul>
@@ -497,51 +539,10 @@ Output: 55
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/能被3整除且至少有一位数字是5/" data-id="cjugh8xyo000wrovzxiypmpnj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/2019/04/01/能被3整除且至少有一位数字是5/" data-id="cjuov58or0014xsvz9tasatl6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-判断回文数" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2019/04/01/判断回文数/" class="article-date">
-  <time datetime="2019-04-01T04:27:08.000Z" itemprop="datePublished">2019-04-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2019/04/01/判断回文数/">判断回文数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>判断一个数是否为回文数。</p>
-<p>设n是一任意自然数。若将n的各位数字反向排列所得自然数n1与n相等，则称n为一回文数。例如，若n=1234321，则称n为一回文数；但若n=1234567，则n不是回文数</p>
-<p>实例</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, reversedInteger = <span class="number">0</span>, remainder, originalInteger;</span><br><span class="line"> </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"输入一个整数: "</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line"> </span><br><span class="line">    originalInteger = n;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 翻转</span></span><br><span class="line">    <span class="keyword">while</span>( n!=<span class="number">0</span> )</span><br><span class="line">    &#123;</span><br><span class="line">        remainder = n%<span class="number">10</span>;</span><br><span class="line">        reversedInteger = reversedInteger*<span class="number">10</span> + remainder;</span><br><span class="line">        n /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 判断</span></span><br><span class="line">    <span class="keyword">if</span> (originalInteger == reversedInteger)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d 是回文数。"</span>, originalInteger);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d 不是回文数。"</span>, originalInteger);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/2019/04/01/判断回文数/" data-id="cjugh8xyp000yrovzdi8v9ajs" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li></ul>
 
     </footer>
   </div>
@@ -568,7 +569,7 @@ Output: 55
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Database/">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Memory/">Memory</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MongoDB/">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/NOIP普及组/">NOIP普及组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/heap/">heap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/installation/">installation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/leetcode/">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/leetcode简单/">leetcode简单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/queue/">queue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/stack/">stack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/tricks/">tricks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/二分查找/">二分查找</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/剑指offer/">剑指offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/模板/">模板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/过来人谈学习方法/">过来人谈学习方法</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Algorithm/">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Algorithm-NOIP普及组/">Algorithm NOIP普及组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Database/">Database</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/LinkedList/">LinkedList</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Memory/">Memory</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MongoDB/">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/NOIP普及组/">NOIP普及组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/heap/">heap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/installation/">installation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/leetcode/">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/leetcode简单/">leetcode简单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/queue/">queue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/stack/">stack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/tricks/">tricks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/二分查找/">二分查找</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/剑指offer/">剑指offer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/模板/">模板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/过来人谈学习方法/">过来人谈学习方法</a></li></ul>
     </div>
   </div>
 
@@ -578,7 +579,7 @@ Output: 55
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/blog/tags/Algorithm-NOIP普及组/" style="font-size: 16.67px;">Algorithm NOIP普及组</a> <a href="/blog/tags/Database/" style="font-size: 10px;">Database</a> <a href="/blog/tags/Java/" style="font-size: 10px;">Java</a> <a href="/blog/tags/Memory/" style="font-size: 10px;">Memory</a> <a href="/blog/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/blog/tags/NOIP普及组/" style="font-size: 13.33px;">NOIP普及组</a> <a href="/blog/tags/heap/" style="font-size: 10px;">heap</a> <a href="/blog/tags/installation/" style="font-size: 10px;">installation</a> <a href="/blog/tags/leetcode/" style="font-size: 16.67px;">leetcode</a> <a href="/blog/tags/leetcode简单/" style="font-size: 16.67px;">leetcode简单</a> <a href="/blog/tags/queue/" style="font-size: 10px;">queue</a> <a href="/blog/tags/stack/" style="font-size: 10px;">stack</a> <a href="/blog/tags/tricks/" style="font-size: 10px;">tricks</a> <a href="/blog/tags/二分查找/" style="font-size: 10px;">二分查找</a> <a href="/blog/tags/剑指offer/" style="font-size: 10px;">剑指offer</a> <a href="/blog/tags/模板/" style="font-size: 10px;">模板</a> <a href="/blog/tags/过来人谈学习方法/" style="font-size: 10px;">过来人谈学习方法</a>
+      <a href="/blog/tags/Algorithm/" style="font-size: 20px;">Algorithm</a> <a href="/blog/tags/Algorithm-NOIP普及组/" style="font-size: 16.67px;">Algorithm NOIP普及组</a> <a href="/blog/tags/Database/" style="font-size: 10px;">Database</a> <a href="/blog/tags/Java/" style="font-size: 10px;">Java</a> <a href="/blog/tags/LinkedList/" style="font-size: 10px;">LinkedList</a> <a href="/blog/tags/Memory/" style="font-size: 10px;">Memory</a> <a href="/blog/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/blog/tags/NOIP普及组/" style="font-size: 13.33px;">NOIP普及组</a> <a href="/blog/tags/heap/" style="font-size: 10px;">heap</a> <a href="/blog/tags/installation/" style="font-size: 10px;">installation</a> <a href="/blog/tags/leetcode/" style="font-size: 16.67px;">leetcode</a> <a href="/blog/tags/leetcode简单/" style="font-size: 16.67px;">leetcode简单</a> <a href="/blog/tags/queue/" style="font-size: 10px;">queue</a> <a href="/blog/tags/stack/" style="font-size: 10px;">stack</a> <a href="/blog/tags/tricks/" style="font-size: 10px;">tricks</a> <a href="/blog/tags/二分查找/" style="font-size: 10px;">二分查找</a> <a href="/blog/tags/剑指offer/" style="font-size: 13.33px;">剑指offer</a> <a href="/blog/tags/模板/" style="font-size: 10px;">模板</a> <a href="/blog/tags/过来人谈学习方法/" style="font-size: 10px;">过来人谈学习方法</a>
     </div>
   </div>
 
@@ -600,6 +601,10 @@ Output: 55
       <ul>
         
           <li>
+            <a href="/blog/2019/04/14/反转链表返回表头/">反转链表返回表头</a>
+          </li>
+        
+          <li>
             <a href="/blog/2019/04/14/两个栈实现队列/">两个栈实现队列</a>
           </li>
         
@@ -613,10 +618,6 @@ Output: 55
         
           <li>
             <a href="/blog/2019/04/11/printf输出时-d前显示特定0/">printf输出时%d前显示特定0</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2019/04/06/软件学院本科生应该怎么学习/">软件学院本科生应该怎么学习</a>
           </li>
         
       </ul>
